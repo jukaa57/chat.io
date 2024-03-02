@@ -14,14 +14,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'))
-});
+    app.use(express.static('public'));
+});     
 
 io.on('connection', (socket) => {
-    console.log('a user connected')
+    socket.on('new user', (name) => {
+        io.emit('new user', name)
+    })
 
     socket.on('chat message', (msg, n) => {
         io.emit('chat message', msg, n)
     })
+
     socket.on('disconnect', () => {
         console.log('a user disconnected')
     })

@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding-bottom: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/600x315/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg');
+}
+
+#backModal {
+    background-color: #2e2e2e2b;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 998;
+}
+
+#modal {
+    background-color: #fff;
+    width: 380px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+    box-shadow: #2e2e2e18 1px 4px 1px 2px;
+}
+
+#modal input {
+    border: 1px solid #999;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    margin: 0.25rem;
+
+    &&:focus {
+        outline: none;
+    }
+}
+
+#modal>button {
+    background: #333;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+
+    &&:hover {
+        background: #282828;
+        cursor: pointer;
+    }
+}
+
+#header {
+    margin: 0;
+    padding: 5px;
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#header>#avatar {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://w7.pngwing.com/pngs/823/285/png-transparent-painted-wolf-avatar-section-gradual-change-wolf-thumbnail.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#name {
+    font-size: 18px;
+    color: #fff;
+}
+
+#statusSig {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+#status {
+    font-size: 11px;
+}
+
+#form {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 3rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+#input {
+    border: none;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    margin: 0.25rem;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#form>button {
+    background: #333;
+    border: none;
+    padding: 0 1rem;
+    margin: 0.25rem;
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages>li {
+    padding: 10px 12px;
+    width: auto;
+    margin: 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+/* #messages > li:nth-child(odd) { padding-top: 8px; } */
