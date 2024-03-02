@@ -33,24 +33,23 @@
       form.addEventListener('submit', e => {
           e.preventDefault();
           if (input.value) {
-              socket.emit('chat message', input.value, name);
-              input.value = '';
+            socket.emit('chat message', input.value, name);
+            input.value = '';
           }
       })
 
       socket.on('chat message', (msg, n) => {
         const item = document.createElement('li')
         if (name !== n) {
-          item.style.backgroundColor = '#a5d3eb';
-          
-          item.style.alignSelf = 'flex-end';
-          item.style.borderBottomLeftRadius = '15px';
-
-        } else {
+          item.style.backgroundColor = '#a5d3eb';   
           item.style.alignSelf = 'flex-start';
-          item.style.backgroundColor = '#aad4c8'
           item.style.borderBottomRightRadius = '15px';
+        } else {
+          item.style.alignSelf = 'flex-end';
+          item.style.backgroundColor = '#aad4c8'
+          item.style.borderBottomLeftRadius = '15px';
         }
+        
         item.textContent = `${n}: ${msg}`
 
         messages.appendChild(item);
